@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { ConexionService } from './conexion.service';
+import { ConexionService } from '../conexion.service';
 import { Observable } from 'rxjs';
+import { interfaceCategoria } from '../interfaceCategoria';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-categorias',
+  templateUrl: './categorias.component.html',
+  styleUrls: ['./categorias.component.css']
 })
+export class CategoriasComponent {
 
-export class AppComponent {
-  
-  title = 'proyectoTienda';
-  listado: any[] = [];
+  listado: interfaceCategoria[] = [];
 
   constructor(private conexion: ConexionService){
     const dato: Observable<any> = this.conexion.leerApi('categorias');

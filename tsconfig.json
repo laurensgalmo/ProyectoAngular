@@ -22,7 +22,8 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false //Añadimos para que no requiera inicializar
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

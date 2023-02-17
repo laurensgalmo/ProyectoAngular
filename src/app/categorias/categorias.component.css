@@ -1,0 +1,66 @@
+form {
+    background-color: #f4f4f4;
+    padding: 50px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    border: none;
+    width: 95%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #todo,
+  #modificar,
+  #eliminar,
+  #añadir {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    margin-left: 6%;  
+    margin-top: 5%;
+  }
+
+  #todo,
+  #modificar,
+  #eliminar,
+  #añadir {
+    margin-auto: 10px;
+  }
+ 
+  #añadir:hover {
+    background-color: #3e8e41;
+  }
+  #eliminar:hover {
+    background-color: #3e8e41;
+  }
+  #todo:hover {
+    background-color: #3e8e41;
+  }
+  #modificar:hover {
+    background-color: #3e8e41;
+  }
+  
