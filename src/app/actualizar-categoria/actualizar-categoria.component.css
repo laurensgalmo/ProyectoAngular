@@ -17,7 +17,6 @@ label {
   border-right: 0;
   border-left: 0;
   border-radius: 0;
-  width: 70%;
 }
 
 h2{
@@ -29,7 +28,7 @@ h2{
 
 button{
   display: inline-block;
-  margin-top: 20px;
+  margin: 10px;
   background-color: #907761 !important;
   color: white !important;
   border-color: white!important;

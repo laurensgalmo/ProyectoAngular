@@ -1,0 +1,22 @@
+<h2>LISTADO CATEGORÍAS</h2>
+<table class="table table-stripped">
+<thead >
+   <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>DESCRIPCIÓN</th>
+      <th> </th>
+      <th> </th>
+   </tr>
+</thead>
+<tbody>
+   <tr *ngFor="let cat of listado;">
+      <td> {{cat.id_categoria}}</td>
+      <td> {{cat.cat_nombre}}</td>
+      <td> {{cat.cat_descripcion}}</td>
+
+      <td> <button (click)="actualizarCategoria(cat.id_categoria)" class="btn btn-info">EDITAR</button></td>
+      <td> <button (click)="eliminarCategoria(cat.id_categoria)" class="btn btn-info">ELIMINAR</button></td>
+   </tr>
+</tbody>
+</table>

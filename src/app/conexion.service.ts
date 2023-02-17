@@ -1,25 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, share } from  'rxjs';
+import { categoria } from './categoria';
 
 @Injectable({providedIn: 'root'})
 
 export class ConexionService {
 
-  API_URL: string = 'http://localhost:8080/';
+private url = 'http://localhost:8080/categorias';
   
   constructor(private http: HttpClient) { }
   
-  leerApi(url: string):Observable<any>{
-    return this.http.get(this.API_URL+url).pipe(share());
-  }
-  deleteApi(url: string):Observable<any>{
-    return this.http.delete(this.API_URL+url).pipe(share());
-  }
- /* putApi(url: string):Observable<any>{
-    return this.http.put(this.API_URL+url).pipe(share());
+  obtenerListaCategorias():Observable<categoria[]>{
+    return this.http.get<categoria[]>(`${this.url}`);
+  } 
 
-    postApi(url: string):Observable<any>{
-    return this.http.post(this.API_URL+url).pipe(share());
-  }*/
+  crearCategoria(categoria: categoria): Observable<any>{
+    return this.http.post(`${this.url}`, categoria);
+  }
+ 
+  actualizarCategoria(id:number, categoria: categoria):Observable<any>{
+    return this.http.put(`${this.url}/${id}`, categoria);
+  }
+
+  eliminarCategoria(id:number):Observable<any>{
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
+  obtenerUnaCategoria(id:number):Observable<any>{
+    return this.http.get(`${this.url}/${id}`);
+  }
 }

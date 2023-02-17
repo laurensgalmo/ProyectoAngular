@@ -1,24 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConexionService } from '../conexion.service';
-import { Observable } from 'rxjs';
-import { interfaceCategoria } from '../interfaceCategoria';
+import { categoria } from '../categoria';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias',
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })
-export class CategoriasComponent {
+export class CategoriasComponent implements OnInit {
 
-  listado: interfaceCategoria[] = [];
+  categoria: categoria = new categoria();
 
-  constructor(private conexion: ConexionService){
-    const dato: Observable<any> = this.conexion.leerApi('categorias');
-    console.log("ENTRO EN EL LISTADO");
-    dato.subscribe(
-      (resp: any)=>{
-        this.listado = resp; //any porque no sabemos la respuesta, es mejor recibirla y porcesarla
-      console.log(this.listado);
-    })
+  constructor(private conexion: ConexionService, private route: Router){}
+  ngOnInit(): void {
+   
+
   }
+
+  guardarCategoria(){
+    this.conexion.crearCategoria(this.categoria).subscribe(dato =>{
+      console.log(dato);
+      this.route.navigate(['listado']);
+    });
+    
+  }
+
+  onSubmit(){
+    console.log(this.categoria);
+    this.guardarCategoria();
+    
+  }
+
+
 }
