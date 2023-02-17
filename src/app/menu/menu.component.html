@@ -1,10 +1,28 @@
-<nav>
-    <ul>
-        <a routerLink = "inicio">Inicio</a>
-        <br>
-        <a routerLink = "/categorias">Categorias</a>
-        <br>
-        <a routerLink = "/contactos">Contactos</a>
-    </ul>
-</nav>
+<!---------------- M E N Ú ----------------->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" >USUARIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">PRODUCTOS</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink = "/categorias" class="nav-link active" aria-current="page" href="#">CATEGORÍAS</a>
+          </li>
+<!---------------- L O G O ----------------->
+          <div id = "texto">
+            <p>namaste</p>
+        </div>
+<!---------------- L O G O ----------------->
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Introducir búsqueda" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 <router-outlet></router-outlet>

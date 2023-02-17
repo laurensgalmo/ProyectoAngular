@@ -1,20 +1,46 @@
-nav {
-    background-color: wheat;
-    color: #fff;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+.nav-link{
+    font-family:'Oswald', sans-serif !important;
+    color: #2C3E50 !important;
+    font-size: 13px !important;
+}
+
+nav{
+    background-color: white !important;
+}
+
+.btn{
+    background-color: #907761 !important;
+    color: white !important;
+    border-color: white!important;
+    border-radius: 10px !important;
+    border-width: 1px;
+    height: 33px !important;
+    font-family:'Oswald', sans-serif !important;
+    font-size: 13px !important;
+}
+
+.nav-link:hover {
+    color:  #ab9680 !important;
   }
-  
- nav a {
-    display: flex;
-    padding: 10px;
-    text-decoration: none;
-    color:#555;
-  }
-  
-  nav a:hover {
-    background-color: whitesmoke;
-  }
+
+.form-control{
+    border-color: #907761 !important;
+    font-size: 13px !important;
+    height: 33px !important;
+    border-radius: 10px !important;
+    border-width: 1px;
+}
+
+#texto{
+    color: #2C3E50 !important;
+    margin-left: 119% !important;
+    height: 12px;
+    display:block !important;
+    font-size: 17px !important;
+    text-align: center !important;
+    font-family: 'Playfair Display', serif !important;
+}
+

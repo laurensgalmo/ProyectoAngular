@@ -44,7 +44,6 @@ form {
     margin-top: 5%;
   }
 
-  #todo,
   #modificar,
   #eliminar,
   #añadir {
@@ -57,9 +56,7 @@ form {
   #eliminar:hover {
     background-color: #3e8e41;
   }
-  #todo:hover {
-    background-color: #3e8e41;
-  }
+  
   #modificar:hover {
     background-color: #3e8e41;
   }
