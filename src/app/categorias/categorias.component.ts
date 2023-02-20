@@ -14,23 +14,19 @@ export class CategoriasComponent implements OnInit {
 
   constructor(private conexion: ConexionService, private route: Router){}
   ngOnInit(): void {
-   
-
   }
 
   guardarCategoria(){
     this.conexion.crearCategoria(this.categoria).subscribe(dato =>{
-      console.log(dato);
       this.route.navigate(['listado']);
-    });
-    
+    }); 
+  }
+
+  irAlListado(){
+    this.route.navigate(['listado']);
   }
 
   onSubmit(){
-    console.log(this.categoria);
-    this.guardarCategoria();
-    
+    this.guardarCategoria();  
   }
-
-
 }

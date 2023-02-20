@@ -11,3 +11,49 @@ h1{
     font-size: 15px;
 }
 
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2e8e1 !important;
+    bottom: 0%;
+}
+
+#eslogan{
+    font-size: 12px !important;
+    color: #ae9c8f;
+}
+
+#contacto{
+    font-size: 12px !important;
+    color: #ae9c8f;
+    margin-left: 60%;
+}
+
+#redes{
+    font-size: 12px !important;
+    color: #ae9c8f;
+    margin-left: 20%;
+}
+
+#texto{
+    font-size: 12px !important;
+    color: #ae9c8f;
+    margin-left: 40%;
+}
+
+#logo{
+    color: #ae9c8f;
+    font-family: 'Playfair Display', serif !important;
+}
+
+i{
+    color: #ae9c8f;
+    padding-right: 10px;
+    padding-top: 15px;
+    font-size: 25px;
+}
+
