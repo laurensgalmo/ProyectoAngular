@@ -1,20 +1,21 @@
 
-<div>
+  <div class="container">
     <div class="row">
       <div class="col">
-       <img src = "../../assets/pexels-elina-fairytale-3865712.jpg">
+       <img src="../../assets/pexels-elina-fairytale-3865712.jpg" alt="foto de la tienda de inciensos">
       </div>
       <div class="col">
         <form (ngSubmit)="onSubmit()">
-            <h2>CATEGORÍAS</h2>
-            <label for="nombre">NOMBRE CATEGORÍA</label>
-            <input class = "form-control" [(ngModel)]="categoria.cat_nombre" type="text" id="nombre" name="nombre" required>    
-            <label for="descripcion">DESCRIPCIÓN CATEGORÍA</label>
-            <input class = "form-control" [(ngModel)]="categoria.cat_descripcion" type="text" id="descripcion" name="descripcion" required>  
-            <button id = "añadir" type="submit">AÑADIR CATEGORÍA</button>
-            <button (click)="irAlListado()" id = "listado" type="submit">LISTADO CATEGORÍA</button>
-          </form>      
+          <h2>CATEGORÍAS</h2>
+          <label for="nombre">NOMBRE CATEGORÍA</label>
+          <input class = "form-control" [(ngModel)]="categoria.cat_nombre" type="text" id="nombre" name="nombre" required>    
+          <label for="descripcion">DESCRIPCIÓN CATEGORÍA</label>
+          <input class = "form-control" [(ngModel)]="categoria.cat_descripcion" type="text" id="descripcion" name="descripcion" required>  
+          <button id = "añadir" type="submit">AÑADIR CATEGORÍA</button>
+          <button (click)="irAlListado()" id = "listado" type="submit">LISTADO CATEGORÍA</button>
+        </form> 
       </div>
     </div>
-    </div>
+  </div>
+
 
